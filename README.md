@@ -10,20 +10,21 @@
 
 set starting point (x,y)
 set heading as a
+pose = (x, y, a)
 define maximum lookahead distance as L
-
+define desired linear velocity as v (vector)
+define maximum angular velocity as w
+define waypoints
+set timeStep
 ---x---
 
 while model has not reached finish line:
 
-look for nearest waypoint
-set value of distance from waypoint as L_d
+v, w= output from controller, input=pose
 
-s = atan(2 * L * sin(α) / L_d)
-where α is the angle between target point and the heading
-
-apply steering angle = s
-
-update the position as (x1,y1)
+update x as x + v*cos(a)*timeStep
+update y as y + v*sin(a)*timeStep
+update a as a + w*timeStep
 
 
+update pose

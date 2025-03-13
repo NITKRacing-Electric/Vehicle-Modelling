@@ -7,38 +7,36 @@
 > two lookahead distances - 0.1 metres for steering angle, and 5 metres for braking point (corner approach) <br>
 > motor model (speed data to rpms, to torque/power outputs + current drawn / battery loading estimation) <br>
 
-
+<code>
 set starting point (x,y)
-
 set heading as a
-
 pose = (x, y, a)
-
 define maximum lookahead distance as L
-
 define desired linear velocity as v (vector)
-
 define maximum angular velocity as w
-
 define waypoints
-
 set timeStep
-
 ---x---
-
 while model has not reached finish line:
-
 v, w= output from controller, input=pose
-
 update x as x + v×cos(a)×timeStep
-
 update y as y + v×sin(a)×timeStep
-
 update a as a + w×timeStep
-
-
 update pose
+</code>
 
+<br>
+<br>
+
+
+more calculations involving:  <br>
+  1. velocity estimation  <br>
+  2. acceleration estimation  <br>
+  3. limiting of velocity and acceleration values due to tire and power limits  <br>
+  4. power/torque/rpm graphs  <br>
+  5. without affecting the tire limits and other vehicle paramters for now:  <br>
+      1. load transfer  <br>
+      2. tire slip  <br>
 
 ## random data (estimates)
 lf = 1.5; % m - length from center to front <br>

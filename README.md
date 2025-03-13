@@ -5,6 +5,7 @@
 > single lap with variable (maximum) velocity <br>
 > no tire limiting - simple max velocity/angular velocity constraint for now <br>
 > two lookahead distances - 0.1 metres for steering angle, and 5 metres for braking point (corner approach) <br>
+> motor model (speed data to rpms, to torque/power outputs + current drawn / battery loading estimation
 
 
 set starting point (x,y)

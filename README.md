@@ -9,22 +9,32 @@
 
 
 set starting point (x,y)
+
 set heading as a
+
 pose = (x, y, a)
+
 define maximum lookahead distance as L
+
 define desired linear velocity as v (vector)
+
 define maximum angular velocity as w
+
 define waypoints
+
 set timeStep
+
 ---x---
 
 while model has not reached finish line:
 
 v, w= output from controller, input=pose
 
-update x as x + v*cos(a)*timeStep
-update y as y + v*sin(a)*timeStep
-update a as a + w*timeStep
+update x as x + v×cos(a)×timeStep
+
+update y as y + v×sin(a)×timeStep
+
+update a as a + w×timeStep
 
 
 update pose

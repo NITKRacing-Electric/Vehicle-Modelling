@@ -23,6 +23,29 @@ update x as x + v×cos(a)×timeStep
 update y as y + v×sin(a)×timeStep
 update a as a + w×timeStep
 update pose
+define mechanical power as P1
+
+define revolutions per minute as rpm
+
+define angular velocity as w1
+
+define current as I
+
+define electrical power as P2
+
+define velocity as V
+define T1 as total time
+
+
+rpm= 6*v/wr
+
+w1= 2*3.14*rpm/60
+
+I=T*5.76036
+
+P1 = T*w1
+
+P2= sum(V*I)/T
 </code>
 
 <br>

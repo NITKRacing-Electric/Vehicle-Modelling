@@ -1,1 +1,5 @@
+INPUTS REQUIRED
 
+OUTPUTS
+which cell has the maximum temperature in battery and in which part of the track
+relate current,heat and temperature to know which cell has the max

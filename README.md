@@ -72,4 +72,4 @@ rpm= 6*v/wr\
 w1= 2*3.14*rpm/60\
 I=T*2*3.14*rpm/(60*Eb)\
 P1 = T*w1\
-P2= sum(times(V,I))/T1\
+P2= sum(times(V,I))/T1

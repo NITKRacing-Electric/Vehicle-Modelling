@@ -23,30 +23,6 @@ update x as x + v×cos(a)×timeStep
 update y as y + v×sin(a)×timeStep
 update a as a + w×timeStep
 update pose
-define mechanical power as P1
-
-define revolutions per minute as rpm
-
-define angular velocity as w1
-
-define current as I
-
-define electrical power as P2
-
-define velocity as V
-define T1 as total time
-define Eb as back emf
-
-
-rpm= 6*v/wr
-
-w1= 2*3.14*rpm/60
-
-I=T*2*3.14*rpm/(60*Eb)
-
-P1 = T*w1
-
-P2= sum(times(V,I))/T1
 </code>
 
 <br>
@@ -81,3 +57,19 @@ I_w = 1.5; % Kg m^2 - inertia of the wheel <br>
 b = 0.1; % Kg m^2 - damping factor of the wheel <br>
 Izz = 3000; % Kg m^2 - Inertia of car about z-axis <br>
 g = 9.8; % m/s^2 - acceleration due to gravity <br>
+
+## Electrical
+
+define mechanical power as P1\
+define revolutions per minute as rpm\
+define angular velocity as w1\
+define current as I\
+define electrical power as P2\
+define velocity as V\
+define T1 as total time\
+define Eb as back emf\
+rpm= 6*v/wr\
+w1= 2*3.14*rpm/60\
+I=T*2*3.14*rpm/(60*Eb)\
+P1 = T*w1\
+P2= sum(times(V,I))/T1\

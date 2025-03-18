@@ -35,17 +35,18 @@ define electrical power as P2
 
 define velocity as V
 define T1 as total time
+define Eb as back emf
 
 
 rpm= 6*v/wr
 
 w1= 2*3.14*rpm/60
 
-I=T*5.76036
+I=T*2*3.14*rpm/(60*Eb)
 
 P1 = T*w1
 
-P2= sum(V*I)/T
+P2= sum(times(V,I))/T1
 </code>
 
 <br>
